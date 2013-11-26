@@ -8,11 +8,11 @@ with open('config.json') as f:
 
 def get_main_identity_auth():
 
-	consumer_key = 'L0DJV29U9yT8EpoJibqwg'
-	consumer_secret = 'zsqoS1NU40vrFfHZiUWy4USNnrtTksgr9yhsD1SQ'
+	consumer_key = config["main"]["consumer_key"]
+	consumer_secret = config["main"]["consumer_secret"]
 
-	access_token = '1091901422-gjnIbtd1bfStyEBKFfpGfvtH9BOhkWbGiQNQGQx' 
-	access_secret = '12WGFJuogIzTxOzqZ1pFD6fT3j7usZnj1sflAZIT8oJ8f'
+	access_token = config["application"]["access_token"]
+	access_secret = config["application"]["access_secret"]
 
 	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 	auth.set_access_token(access_token, access_secret)
